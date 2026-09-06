@@ -3,6 +3,8 @@
     #region Question1
     class Book
     {
+        //Question2
+        internal int coppiesInStock=5;
         private string password= "secret";
     }
     #endregion
@@ -12,7 +14,9 @@
         {
             //Question1
             Book book = new Book();
-            Console.WriteLine(book.password); // This will cause a compilation error because 'password' is private
+            //Question2
+            Console.WriteLine(book.coppiesInStock); // This will work because 'coppiesInStock' is internal
+           // Console.WriteLine(book.password); // This will cause a compilation error because 'password' is private
 
         }
     }
