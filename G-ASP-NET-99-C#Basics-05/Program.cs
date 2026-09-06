@@ -13,8 +13,8 @@
     class Book
     {
         //Question2
-        internal int coppiesInStock=5;
-        private string password= "secret";
+        internal int coppiesInStock = 5;
+        private string password = "secret";
         //Question3
         public string title;
         //Question4
@@ -29,8 +29,8 @@
             Book book = new Book();
             //Question2
             Console.WriteLine(book.coppiesInStock); // This will work because 'coppiesInStock' is internal
-           // Console.WriteLine(book.password); // This will cause a compilation error because 'password' is private
-           //Question3
+                                                    // Console.WriteLine(book.password); // This will cause a compilation error because 'password' is private
+                                                    //Question3
             book.title = "C# Book";
             Console.WriteLine(book.title); // This will work because 'title' is public
             //Question4
@@ -45,13 +45,24 @@
             Genre resultGenre = (Genre)genreNumber;
             Console.WriteLine(resultGenre); // This will print "NonFiction"
             //Question7
-            Genre genre=Genre.Fiction;
+            Genre genre = Genre.Fiction;
             string genreName = genre.ToString();
             Console.WriteLine(genreName);
             //Question8
             string genreText = "Science";
             Genre parsedGenre = (Genre)Enum.Parse(typeof(Genre), genreText);
             Console.WriteLine(parsedGenre);
+            //Question9
+            string genreText1 = "Mystery";
+            Genre result;
+            if (Enum.TryParse(genreText1, out result))
+            {
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine($"'{genreText1}' Unknown genre.");
+            }
         }
     }
 }
