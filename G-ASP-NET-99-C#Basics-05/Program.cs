@@ -6,6 +6,8 @@
         //Question2
         internal int coppiesInStock=5;
         private string password= "secret";
+        //Question3
+        public string title;
     }
     #endregion
     internal class Program
@@ -17,7 +19,9 @@
             //Question2
             Console.WriteLine(book.coppiesInStock); // This will work because 'coppiesInStock' is internal
            // Console.WriteLine(book.password); // This will cause a compilation error because 'password' is private
-
+           //Question3
+            book.title = "C# Book";
+            Console.WriteLine(book.title); // This will work because 'title' is public
         }
     }
 }
