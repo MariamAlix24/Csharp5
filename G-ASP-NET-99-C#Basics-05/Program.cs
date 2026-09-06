@@ -1,5 +1,14 @@
 ﻿namespace G_ASP_NET_99_C_Basics_05
 {
+    #region Question4
+    enum Genre
+    {
+        Fiction,
+        NonFiction,
+        Science,
+        History
+    }
+    #endregion
     #region Question1
     class Book
     {
@@ -8,6 +17,8 @@
         private string password= "secret";
         //Question3
         public string title;
+        //Question4
+        public Genre genre;
     }
     #endregion
     internal class Program
@@ -22,6 +33,9 @@
            //Question3
             book.title = "C# Book";
             Console.WriteLine(book.title); // This will work because 'title' is public
+            //Question4
+            book.genre = Genre.Science;
+            Console.WriteLine(book.genre);
         }
     }
 }
