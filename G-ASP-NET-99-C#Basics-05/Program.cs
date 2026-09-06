@@ -40,6 +40,10 @@
             Console.WriteLine((int)Genre.Fiction);
             Console.WriteLine((int)Genre.NonFiction);
             Console.WriteLine((int)Genre.Science);
+            //Question6
+            int genreNumber = 1;
+            Genre resultGenre = (Genre)genreNumber;
+            Console.WriteLine(resultGenre); // This will print "NonFiction"
         }
     }
 }
