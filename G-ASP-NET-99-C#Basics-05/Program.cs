@@ -44,6 +44,10 @@
             int genreNumber = 1;
             Genre resultGenre = (Genre)genreNumber;
             Console.WriteLine(resultGenre); // This will print "NonFiction"
+            //Question7
+            Genre genre=Genre.Fiction;
+            string genreName = genre.ToString();
+            Console.WriteLine(genreName);
         }
     }
 }
