@@ -36,6 +36,10 @@
             //Question4
             book.genre = Genre.Science;
             Console.WriteLine(book.genre);
+            //Question5
+            Console.WriteLine((int)Genre.Fiction);
+            Console.WriteLine((int)Genre.NonFiction);
+            Console.WriteLine((int)Genre.Science);
         }
     }
 }
